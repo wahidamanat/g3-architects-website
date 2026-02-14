@@ -126,6 +126,7 @@ main > section{
 
 .features{
     gap: 140px;
+
 }
 
 #feature-section-title{
@@ -140,12 +141,13 @@ main > section{
     box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.06);
     margin-bottom: 20px;
     border-radius: 8px;
+    
 }
 
 .feature-card .feature-title{
     font-weight: 600;
     font-size: 1.25rem;
-    margin-bottom: 0px;
+    margin-top: 0px;
     margin-bottom: 0px;
 }
 
@@ -161,8 +163,7 @@ main > section{
     font-weight: 700;
 }
 .featured-architect img{
-    width: 100%;
-
+    height: 100%;
 }
 
 /* some facts section */
@@ -219,15 +220,19 @@ main > section{
 /* footer section */
 
 .footer{
-    background-color: #FFF4E7;
+    /* background-color: #FFF4E7; */
+
+    margin-bottom: 50px;
 
 }
 
 .footer .footer-container{
+     background-color: #FFF4E7;
+     width: 75%;
     max-width: 1440px ;
     justify-content: center;
-    margin: 130px 40px;
-    padding: 50px 0;
+    margin: 0 auto;
+    padding: 30px 0;
     text-align: center;
     border-radius: 8px;
 }
@@ -236,14 +241,14 @@ main > section{
 
 /* responsive media query */
 @media screen and (max-width:576px){
-    .navbar, .nav-links, .teams {
+    .navbar, .nav-links, .teams ,.features{
         flex-direction: column;
         
     }
     .team-img-container,
      .facts-container, 
      .sponsors-companies,
-     .features{
+     .features {
         grid-template-columns: repeat(1, 1fr);
     }
     .facts-container{
@@ -252,7 +257,9 @@ main > section{
     }
     .our-features{
         margin-left: 20px;
+        
     }
+    
     #experienced-badge{
         margin-top: 21px;
         margin-left: 21px;
@@ -263,15 +270,20 @@ main > section{
 /* medium size device */
 
 @media screen and (min-width:576px) and (max-width:992px){
-    .teams{
+    .teams, .features{
         flex-direction: column;
     }
     .our-features{
         margin:50px auto;
     }
-    .sponsors-companies, .facts-container {
+    .sponsors-companies, .facts-container , .features {
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
         justify-items: center;
+    }
+
+     #experienced-badge{
+        margin-top: 21px;
+        margin-left: 21px;
     }
 }
